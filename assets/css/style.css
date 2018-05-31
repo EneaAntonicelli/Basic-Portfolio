@@ -23,6 +23,11 @@ nav {
     text-align: right;
     margin-right: 75px;
 }
+.portfolio {
+    display: inline-block;
+    float: left;
+
+}
 
 h1 {
     color: white;
@@ -49,6 +54,10 @@ main {
     margin-top: 100px;
 }
 
+.portfoliomain {
+    max-height: none;
+}
+
 a:link, a:visited {
     color: #777777;
     text-decoration: none;
@@ -58,10 +67,12 @@ a:link, a:visited {
 img {
     float: left;
     padding-right: 40px;
+    max-height: 200px;
 }
 
-a {
+a, p {
     padding: 20px;
+    text-align: justify;
 }
 
 h2 {
@@ -77,4 +88,63 @@ footer {
     text-align: center;
     line-height: 75px;
     height: 75px;
+}
+.port {
+    height: 150px;
+    width: 315px;
+    padding: 5px;
+    display: inline-block;
+}
+.contactmain{
+    height: 500px;
+    align-content: center;
+    margin-bottom: 40px;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4aaaa5;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #54c2bc;
+}
+
+.container {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
 }
