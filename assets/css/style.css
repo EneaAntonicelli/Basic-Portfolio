@@ -13,16 +13,17 @@ header {
     border: 1px solid #cccccc;
     position: relative;
 }
+.headercontainer {
+    max-width: 960px;
+    margin: auto;
+    position: relative;
+}
 
     h1 {
         color: #ffffff;
         float: left;
         background: #4aaaa5;
         width: 400px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 278px;
         text-align: center;
         line-height: 60px;
         font-size: 18pt;
@@ -33,10 +34,7 @@ header {
         color: #777777;
         font-size: 85%;
         text-decoration: none;
-        width: 400px;
-        position: absolute;
-        top: 0;
-        right: 278px;
+        width: 375px;
         text-align: center;
         line-height: 60px;
         
@@ -52,20 +50,20 @@ header {
         text-align: justify;
     }
 
-    main {
+    .main {
         background: #ffffff;
         max-width: 960px;
-        height: 530px;
         margin: auto;
         margin-top: 40px;
         position: relative;
         border: 1px solid #dddddd;
+        overflow: auto;   
     }
-
-    .main {
-        height: 600px;
-        margin-bottom: 100px;
+    #indexmain {
+        height: 540px;
+        
     }
+ 
 
     #aboutme {
         display: block;
@@ -89,6 +87,10 @@ header {
         float: left;
         margin: 2%;
         position: relative;
+    }
+    .portfoliocontainer {
+        overflow: auto;
+        padding-left: 20px;
     }
     .teal_banner {
         background: #4aaaa5;
@@ -154,9 +156,7 @@ footer {
 /* The following code applies to Form development */
 
 .contactmain{
-    height: 600px;
-    align-content: center;
-    margin-bottom: 100px;
+    overflow: auto;
 }
 
 input[type=text], select, textarea {
@@ -184,12 +184,13 @@ input[type=submit]:hover {
 .container {
     border-radius: 5px;
     padding: 10px;
+    overflow: auto;
 }
 
 
 .column {
     float: left;
-    width: 50%;
+    width: 75%;
     padding: 10px 20px 20px 20px;
 }
 
@@ -201,9 +202,47 @@ input[type=submit]:hover {
 }
 
 
+ @media screen and (max-width: 778px) {
+    .column, input[type=submit] {
+        
+    }
+    nav {
+        background-color: #fff;
+        float: left;
+        width: 100%;
+        text-align: center;
+        
+    }
+     .contactmain {
+        width: 100%;
+        margin: auto;
+    }
+    h1 {
+        width: 100%;
+    }
+} 
+
 @media screen and (max-width: 600px) {
     .column, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
+        
     }
-}
+    header {
+        width: 100%;
+    }
+    nav {
+        background-color: #fff;
+        float: left;
+        
+    }
+    #indexmain p {
+        clear: both;
+    }
+    #indexmain img {
+        width: 250px;
+        display: block;
+        margin: auto;
+        float: unset;
+        
+    }
+} 
+    
